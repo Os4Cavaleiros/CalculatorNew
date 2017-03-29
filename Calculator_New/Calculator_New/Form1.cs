@@ -16,15 +16,25 @@ namespace Calculator_New
         {
             InitializeComponent();
         }
+
+        ////// Variables Declaration ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Boolean enter_value;
         double result;
         string opera;
 
+        ////// FORM LOAD ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
+        ////// NUMERICAL BUTTONS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Se boolean é true, dá clear ao display.
+        /// Se já contei vírgula, não mete outra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_Click(object sender, EventArgs e)
         {
             Button num = (Button)sender;
