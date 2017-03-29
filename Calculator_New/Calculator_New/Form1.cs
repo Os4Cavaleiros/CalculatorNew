@@ -21,5 +21,35 @@ namespace Calculator_New
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEquals_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDisplay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
