@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace Calculator_New
 {
-    public partial class Calculator : Form
+    public partial class Form1 : Form
     {
-        public Calculator()
+        public Form1()
         {
             InitializeComponent();
         }
-        bool enter_value;
+        Boolean enter_value;
+        double result;
+        string opera;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -48,16 +50,6 @@ namespace Calculator_New
             enter_value = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -65,7 +57,24 @@ namespace Calculator_New
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
+            switch (opera)
+            {
+                case "+":
+                    textBoxDisplay.Text = (result + Double.Parse(textBoxDisplay.Text)).ToString();
+                    break;
 
+                case "-":
+                    textBoxDisplay.Text = (result - Double.Parse(textBoxDisplay.Text)).ToString();
+                    break;
+
+                case "*":
+                    textBoxDisplay.Text = (result * Double.Parse(textBoxDisplay.Text)).ToString();
+                    break;
+
+                case "/":
+                    textBoxDisplay.Text = (result / Double.Parse(textBoxDisplay.Text)).ToString();
+                    break;
+            }
         }
 
         private void buttonSum_Click(object sender, EventArgs e)
@@ -76,6 +85,20 @@ namespace Calculator_New
         private void textBoxDisplay_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void aritmetic_Operator(object sender, EventArgs e)
+        {
+            Button num = (Button)sender;
+            opera = num.Text;
+            result = Double.Parse(textBoxDisplay.Text);
+            textBoxDisplay.Text = "";
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxDisplay.Text = "";
+            opera = "";
         }
     }
 }

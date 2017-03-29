@@ -1,6 +1,6 @@
 ﻿namespace Calculator_New
 {
-    partial class Calculator
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +45,10 @@
             this.button10 = new System.Windows.Forms.Button();
             this.buttonSum = new System.Windows.Forms.Button();
             this.buttonEquals = new System.Windows.Forms.Button();
+            this.buttonMultiply = new System.Windows.Forms.Button();
+            this.buttonDivide = new System.Windows.Forms.Button();
+            this.buttonMinus = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,17 +189,17 @@
             // 
             // buttonSum
             // 
-            this.buttonSum.Location = new System.Drawing.Point(196, 153);
+            this.buttonSum.Location = new System.Drawing.Point(197, 107);
             this.buttonSum.Name = "buttonSum";
             this.buttonSum.Size = new System.Drawing.Size(40, 40);
             this.buttonSum.TabIndex = 5;
             this.buttonSum.Text = "+";
             this.buttonSum.UseVisualStyleBackColor = true;
-            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
+            this.buttonSum.Click += new System.EventHandler(this.aritmetic_Operator);
             // 
             // buttonEquals
             // 
-            this.buttonEquals.Location = new System.Drawing.Point(196, 107);
+            this.buttonEquals.Location = new System.Drawing.Point(243, 245);
             this.buttonEquals.Name = "buttonEquals";
             this.buttonEquals.Size = new System.Drawing.Size(40, 40);
             this.buttonEquals.TabIndex = 6;
@@ -203,11 +207,55 @@
             this.buttonEquals.UseVisualStyleBackColor = true;
             this.buttonEquals.Click += new System.EventHandler(this.buttonEquals_Click);
             // 
-            // Calculator
+            // buttonMultiply
+            // 
+            this.buttonMultiply.Location = new System.Drawing.Point(197, 245);
+            this.buttonMultiply.Name = "buttonMultiply";
+            this.buttonMultiply.Size = new System.Drawing.Size(40, 40);
+            this.buttonMultiply.TabIndex = 12;
+            this.buttonMultiply.Text = "*";
+            this.buttonMultiply.UseVisualStyleBackColor = true;
+            this.buttonMultiply.Click += new System.EventHandler(this.aritmetic_Operator);
+            // 
+            // buttonDivide
+            // 
+            this.buttonDivide.Location = new System.Drawing.Point(197, 199);
+            this.buttonDivide.Name = "buttonDivide";
+            this.buttonDivide.Size = new System.Drawing.Size(40, 40);
+            this.buttonDivide.TabIndex = 13;
+            this.buttonDivide.Text = "/";
+            this.buttonDivide.UseVisualStyleBackColor = true;
+            this.buttonDivide.Click += new System.EventHandler(this.aritmetic_Operator);
+            // 
+            // buttonMinus
+            // 
+            this.buttonMinus.Location = new System.Drawing.Point(197, 153);
+            this.buttonMinus.Name = "buttonMinus";
+            this.buttonMinus.Size = new System.Drawing.Size(40, 40);
+            this.buttonMinus.TabIndex = 14;
+            this.buttonMinus.Text = "-";
+            this.buttonMinus.UseVisualStyleBackColor = true;
+            this.buttonMinus.Click += new System.EventHandler(this.aritmetic_Operator);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(239, 107);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(40, 40);
+            this.buttonClear.TabIndex = 15;
+            this.buttonClear.Text = "C";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 302);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.buttonMinus);
+            this.Controls.Add(this.buttonDivide);
+            this.Controls.Add(this.buttonMultiply);
             this.Controls.Add(this.buttonEquals);
             this.Controls.Add(this.buttonSum);
             this.Controls.Add(this.button10);
@@ -224,8 +272,8 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Calculator";
-            this.Text = "Form1";
+            this.Name = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -252,6 +300,10 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button buttonSum;
         private System.Windows.Forms.Button buttonEquals;
+        private System.Windows.Forms.Button buttonMultiply;
+        private System.Windows.Forms.Button buttonDivide;
+        private System.Windows.Forms.Button buttonMinus;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 
