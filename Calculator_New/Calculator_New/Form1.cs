@@ -17,21 +17,26 @@ namespace Calculator_New
             InitializeComponent();
         }
 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////// Variables Declaration ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Boolean enter_value;
         double result;
         string opera;
 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////// FORM LOAD ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////// NUMERICAL BUTTONS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
+        /// Ao clicar no botão, escreve o que o botão contém.
         /// Se boolean é true, dá clear ao display.
-        /// Se já contei vírgula, não mete outra
+        /// Se já contem vírgula, não mete outra.
+        /// Se só contem o 0, limpa antes de substituir por outro número.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -60,11 +65,30 @@ namespace Calculator_New
             enter_value = false;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////// OPERATOR BUTTONS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Ao clicar no botão, envia o que está no seu texto.
+        /// Dá para o switch case em string a operação correspondente ao botão.
+        /// Limpa o display.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void aritmetic_Operator(object sender, EventArgs e)
         {
-
+            Button num = (Button)sender;
+            opera = num.Text;
+            result = Double.Parse(textBoxDisplay.Text);
+            textBoxDisplay.Text = "";
         }
 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////// EQUALS BUTTON ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Switch case para as operações que precisarem de 2 valores
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonEquals_Click(object sender, EventArgs e)
         {
             switch (opera)
@@ -87,9 +111,17 @@ namespace Calculator_New
             }
         }
 
-        private void buttonSum_Click(object sender, EventArgs e)
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////// CLEAR BUTTON /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Limpa a display e a variável do switch
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonClear_Click(object sender, EventArgs e)
         {
-
+            textBoxDisplay.Text = "";
+            opera = "";
         }
 
         private void textBoxDisplay_TextChanged(object sender, EventArgs e)
@@ -97,18 +129,6 @@ namespace Calculator_New
 
         }
 
-        private void aritmetic_Operator(object sender, EventArgs e)
-        {
-            Button num = (Button)sender;
-            opera = num.Text;
-            result = Double.Parse(textBoxDisplay.Text);
-            textBoxDisplay.Text = "";
-        }
 
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            textBoxDisplay.Text = "";
-            opera = "";
-        }
     }
 }
