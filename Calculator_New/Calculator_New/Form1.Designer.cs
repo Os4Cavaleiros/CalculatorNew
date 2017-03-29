@@ -43,6 +43,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.buttonSum = new System.Windows.Forms.Button();
+            this.buttonEquals = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +81,7 @@
             this.textBoxDisplay.TabIndex = 1;
             this.textBoxDisplay.Text = "0";
             this.textBoxDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxDisplay.TextChanged += new System.EventHandler(this.textBoxDisplay_TextChanged);
             // 
             // button1
             // 
@@ -162,6 +165,27 @@
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // buttonSum
+            // 
+            this.buttonSum.Location = new System.Drawing.Point(196, 153);
+            this.buttonSum.Name = "buttonSum";
+            this.buttonSum.Size = new System.Drawing.Size(40, 40);
+            this.buttonSum.TabIndex = 5;
+            this.buttonSum.Text = "+";
+            this.buttonSum.UseVisualStyleBackColor = true;
+            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
+            // 
+            // buttonEquals
+            // 
+            this.buttonEquals.Location = new System.Drawing.Point(196, 107);
+            this.buttonEquals.Name = "buttonEquals";
+            this.buttonEquals.Size = new System.Drawing.Size(40, 40);
+            this.buttonEquals.TabIndex = 6;
+            this.buttonEquals.Text = "=";
+            this.buttonEquals.UseVisualStyleBackColor = true;
+            this.buttonEquals.Click += new System.EventHandler(this.buttonEquals_Click);
             // 
             this.button10.Location = new System.Drawing.Point(58, 245);
             this.button10.Name = "button10";
@@ -174,6 +198,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(291, 278);
+            this.Controls.Add(this.buttonEquals);
+            this.Controls.Add(this.buttonSum);
             this.ClientSize = new System.Drawing.Size(291, 302);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button7);
@@ -215,6 +242,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button buttonSum;
+        private System.Windows.Forms.Button buttonEquals;
     }
 }
 
