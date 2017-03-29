@@ -16,6 +16,7 @@ namespace Calculator_New
         {
             InitializeComponent();
         }
+        bool enter_value;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -24,7 +25,27 @@ namespace Calculator_New
 
         private void button_Click(object sender, EventArgs e)
         {
+            Button num = (Button)sender;
 
+            if (enter_value)
+            {
+                textBoxDisplay.Text = "";
+            }
+
+            if (num.Text == ",")
+            {
+                if (!textBoxDisplay.Text.Contains(","))
+                    textBoxDisplay.Text = textBoxDisplay.Text + num.Text;
+            }
+            else
+            {
+                if ((textBoxDisplay.Text == "0"))
+                {
+                    textBoxDisplay.Text = "";
+                }
+                textBoxDisplay.Text = textBoxDisplay.Text + num.Text;
+            }
+            enter_value = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
