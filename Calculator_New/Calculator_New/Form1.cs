@@ -21,7 +21,13 @@ namespace Calculator_New
         ////// Variables Declaration ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Boolean enter_value;
         double result;
-        string opera;
+        string opera = "";
+        private double tempNum;
+        private double tempResult;
+        private double num1;
+        private bool sumTrigger = true;
+        private bool subTrigger = true;
+        private bool prevOpera = false;
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////// FORM LOAD ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -52,7 +58,11 @@ namespace Calculator_New
             if (num.Text == ",")
             {
                 if (!textBoxDisplay.Text.Contains(","))
+                {
                     textBoxDisplay.Text = textBoxDisplay.Text + num.Text;
+                    labelDisplay.Text = labelDisplay.Text + num.Text;
+
+                }
             }
             else
             {
@@ -61,6 +71,7 @@ namespace Calculator_New
                     textBoxDisplay.Text = "";
                 }
                 textBoxDisplay.Text = textBoxDisplay.Text + num.Text;
+                labelDisplay.Text = labelDisplay.Text + num.Text;
             }
             enter_value = false;
         }
@@ -78,6 +89,58 @@ namespace Calculator_New
         {
             Button num = (Button)sender;
             opera = num.Text;
+
+            
+            switch (opera)
+            {
+                case "+":
+
+                        if (sumTrigger)
+                        {
+                            tempNum = Convert.ToDouble(textBoxDisplay.Text);
+                            tempResult = num1 + tempNum;
+                            textBoxDisplay.Text = tempResult.ToString();
+                            labelDisplay.Text = labelDisplay.Text + opera;
+                            sumTrigger = false;
+                            prevOpera = true;
+                        }
+                        else
+                        {
+                            tempNum = Convert.ToDouble(textBoxDisplay.Text);
+                            tempResult = tempResult + tempNum;
+                            textBoxDisplay.Text = tempResult.ToString();
+                            labelDisplay.Text = labelDisplay.Text + opera;
+                        }
+
+                    break;
+
+                case "-":
+                        if (subTrigger)
+                        {
+                            tempNum = Convert.ToDouble(textBoxDisplay.Text);
+                            tempResult = tempNum - num1;
+                            textBoxDisplay.Text = tempResult.ToString();
+                            labelDisplay.Text = labelDisplay.Text + opera;
+                            subTrigger = false;
+
+                        }
+                        else
+                        {
+                            tempNum = Convert.ToDouble(textBoxDisplay.Text);
+                            tempResult = tempResult - tempNum;
+                            textBoxDisplay.Text = tempResult.ToString();
+                            labelDisplay.Text = labelDisplay.Text + opera;
+                        }
+                    break;
+            }
+
+
+
+
+
+
+
+            
             result = Double.Parse(textBoxDisplay.Text);
             textBoxDisplay.Text = "";
         }
@@ -95,10 +158,14 @@ namespace Calculator_New
             {
                 case "+":
                     textBoxDisplay.Text = (result + Double.Parse(textBoxDisplay.Text)).ToString();
+                    labelDisplay.Text = textBoxDisplay.Text;
+                    sumTrigger = true;
                     break;
 
                 case "-":
                     textBoxDisplay.Text = (result - Double.Parse(textBoxDisplay.Text)).ToString();
+                    labelDisplay.Text = textBoxDisplay.Text;
+                    subTrigger = true;
                     break;
 
                 case "*":
@@ -108,6 +175,7 @@ namespace Calculator_New
                 case "/":
                     textBoxDisplay.Text = (result / Double.Parse(textBoxDisplay.Text)).ToString();
                     break;
+
             }
         }
 
@@ -120,8 +188,16 @@ namespace Calculator_New
         /// <param name="e"></param>
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxDisplay.Text = "";
+            clearDisplay();
             opera = "";
+            tempNum = 0;
+            tempResult = 0;
+            num1 = 0;
+            sumTrigger = true;
+            subTrigger = true;
+            prevOpera = false;
+            labelDisplay.Text = "";
+
         }
 
         private void textBoxDisplay_TextChanged(object sender, EventArgs e)
@@ -129,6 +205,14 @@ namespace Calculator_New
 
         }
 
+        private void labelDisplay_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void clearDisplay()
+        {
+            textBoxDisplay.Text = "";
+        }
     }
 }

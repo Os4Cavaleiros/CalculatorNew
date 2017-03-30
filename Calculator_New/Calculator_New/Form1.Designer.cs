@@ -50,6 +50,7 @@
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonComma = new System.Windows.Forms.Button();
+            this.labelDisplay = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -258,11 +259,22 @@
             this.buttonComma.UseVisualStyleBackColor = true;
             this.buttonComma.Click += new System.EventHandler(this.button_Click);
             // 
+            // labelDisplay
+            // 
+            this.labelDisplay.AutoSize = true;
+            this.labelDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisplay.Location = new System.Drawing.Point(21, 76);
+            this.labelDisplay.Name = "labelDisplay";
+            this.labelDisplay.Size = new System.Drawing.Size(0, 16);
+            this.labelDisplay.TabIndex = 17;
+            this.labelDisplay.Click += new System.EventHandler(this.labelDisplay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 302);
+            this.Controls.Add(this.labelDisplay);
             this.Controls.Add(this.buttonComma);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonMinus);
@@ -317,6 +329,7 @@
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonComma;
+        private System.Windows.Forms.Label labelDisplay;
     }
 }
 
