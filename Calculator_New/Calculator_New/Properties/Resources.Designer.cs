@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Form1.Properties
+namespace Calculator_New.Properties
 {
 
 
