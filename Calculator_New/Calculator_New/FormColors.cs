@@ -80,6 +80,13 @@ namespace Calculator_New
             fr1Local.MainMenuStrip.ForeColor = Color.White;
         }
 
+        /// <summary>
+        /// Altera no main form a cor background e do menu strip para a do botão
+        /// Do menu strip
+        /// E a cor da font do menu strip para branco
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonOrange_Click(object sender, EventArgs e)
         {
             fr1Local.BackColor = Color.Orange;
@@ -87,6 +94,13 @@ namespace Calculator_New
             fr1Local.MainMenuStrip.ForeColor = Color.White;
         }
 
+        /// <summary>
+        /// Altera no main form a cor background e do menu strip para a do botão
+        /// Do menu strip
+        /// E a cor da font do menu strip para branco
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonYellow_Click(object sender, EventArgs e)
         {
             fr1Local.BackColor = Color.Yellow;
@@ -94,6 +108,13 @@ namespace Calculator_New
             fr1Local.MainMenuStrip.ForeColor = Color.White;
         }
 
+        /// <summary>
+        /// Altera no main form a cor background e do menu strip para a do botão
+        /// Do menu strip
+        /// E a cor da font do menu strip para branco
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonPink_Click(object sender, EventArgs e)
         {
             fr1Local.BackColor = Color.Fuchsia;
