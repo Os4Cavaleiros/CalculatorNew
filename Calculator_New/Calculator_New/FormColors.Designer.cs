@@ -33,11 +33,13 @@
             this.buttonGreen = new System.Windows.Forms.Button();
             this.buttonRed = new System.Windows.Forms.Button();
             this.buttonBlue = new System.Windows.Forms.Button();
+            this.buttonTransparent = new System.Windows.Forms.Button();
             this.groupBoxDefaultColors.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxDefaultColors
             // 
+            this.groupBoxDefaultColors.Controls.Add(this.buttonTransparent);
             this.groupBoxDefaultColors.Controls.Add(this.buttonBlue);
             this.groupBoxDefaultColors.Controls.Add(this.buttonGreen);
             this.groupBoxDefaultColors.Controls.Add(this.buttonRed);
@@ -52,9 +54,10 @@
             // buttonGreen
             // 
             this.buttonGreen.BackColor = System.Drawing.Color.Green;
+            this.buttonGreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGreen.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonGreen.Location = new System.Drawing.Point(49, 24);
+            this.buttonGreen.Location = new System.Drawing.Point(83, 24);
             this.buttonGreen.Name = "buttonGreen";
             this.buttonGreen.Size = new System.Drawing.Size(27, 26);
             this.buttonGreen.TabIndex = 1;
@@ -64,9 +67,10 @@
             // buttonRed
             // 
             this.buttonRed.BackColor = System.Drawing.Color.Red;
+            this.buttonRed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRed.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonRed.Location = new System.Drawing.Point(16, 24);
+            this.buttonRed.Location = new System.Drawing.Point(50, 24);
             this.buttonRed.Name = "buttonRed";
             this.buttonRed.Size = new System.Drawing.Size(27, 26);
             this.buttonRed.TabIndex = 0;
@@ -76,14 +80,30 @@
             // buttonBlue
             // 
             this.buttonBlue.BackColor = System.Drawing.Color.Blue;
+            this.buttonBlue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBlue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonBlue.Location = new System.Drawing.Point(82, 24);
+            this.buttonBlue.Location = new System.Drawing.Point(116, 24);
             this.buttonBlue.Name = "buttonBlue";
             this.buttonBlue.Size = new System.Drawing.Size(27, 26);
             this.buttonBlue.TabIndex = 2;
             this.buttonBlue.UseVisualStyleBackColor = false;
             this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
+            // 
+            // buttonTransparent
+            // 
+            this.buttonTransparent.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonTransparent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTransparent.BackgroundImage")));
+            this.buttonTransparent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonTransparent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTransparent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTransparent.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonTransparent.Location = new System.Drawing.Point(17, 24);
+            this.buttonTransparent.Name = "buttonTransparent";
+            this.buttonTransparent.Size = new System.Drawing.Size(27, 26);
+            this.buttonTransparent.TabIndex = 3;
+            this.buttonTransparent.UseVisualStyleBackColor = false;
+            this.buttonTransparent.Click += new System.EventHandler(this.buttonTransparent_Click);
             // 
             // FormColors
             // 
@@ -107,5 +127,6 @@
         private System.Windows.Forms.Button buttonRed;
         private System.Windows.Forms.Button buttonGreen;
         private System.Windows.Forms.Button buttonBlue;
+        private System.Windows.Forms.Button buttonTransparent;
     }
 }
