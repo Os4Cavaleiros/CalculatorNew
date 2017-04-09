@@ -31,7 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.standardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scientificToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxDisplay = new System.Windows.Forms.TextBox();
@@ -60,11 +65,6 @@
             this.buttonPercentage = new System.Windows.Forms.Button();
             this.buttonInverse = new System.Windows.Forms.Button();
             this.buttonSquare = new System.Windows.Forms.Button();
-            this.standardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scientificToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.colorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(288, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(291, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,6 +91,31 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
             // 
+            // standardToolStripMenuItem
+            // 
+            this.standardToolStripMenuItem.Name = "standardToolStripMenuItem";
+            this.standardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.standardToolStripMenuItem.Text = "Standard";
+            this.standardToolStripMenuItem.Click += new System.EventHandler(this.standardToolStripMenuItem_Click);
+            // 
+            // scientificToolStripMenuItem
+            // 
+            this.scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
+            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.scientificToolStripMenuItem.Text = "Scientific";
+            // 
+            // temperatureToolStripMenuItem
+            // 
+            this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
+            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.temperatureToolStripMenuItem.Text = "Temperature";
+            // 
+            // anglesToolStripMenuItem
+            // 
+            this.anglesToolStripMenuItem.Name = "anglesToolStripMenuItem";
+            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.anglesToolStripMenuItem.Text = "Angles";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -99,6 +124,13 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.helpToolStripMenuItem.Text = "Edit";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // colorsToolStripMenuItem
+            // 
+            this.colorsToolStripMenuItem.Name = "colorsToolStripMenuItem";
+            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.colorsToolStripMenuItem.Text = "Colors";
+            this.colorsToolStripMenuItem.Click += new System.EventHandler(this.colorsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem1
             // 
@@ -111,17 +143,17 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // textBoxDisplay
             // 
             this.textBoxDisplay.Enabled = false;
             this.textBoxDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDisplay.Location = new System.Drawing.Point(12, 27);
+            this.textBoxDisplay.Location = new System.Drawing.Point(12, 32);
             this.textBoxDisplay.Multiline = true;
             this.textBoxDisplay.Name = "textBoxDisplay";
-            this.textBoxDisplay.Size = new System.Drawing.Size(267, 65);
+            this.textBoxDisplay.Size = new System.Drawing.Size(271, 65);
             this.textBoxDisplay.TabIndex = 1;
             this.textBoxDisplay.Text = "0";
             this.textBoxDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -319,6 +351,7 @@
             this.buttonPlusMinus.TabIndex = 18;
             this.buttonPlusMinus.Text = "±";
             this.buttonPlusMinus.UseVisualStyleBackColor = true;
+            this.buttonPlusMinus.Click += new System.EventHandler(this.buttonPlusMinus_Click);
             // 
             // buttonClearEntry
             // 
@@ -337,6 +370,7 @@
             this.buttonBackspace.TabIndex = 20;
             this.buttonBackspace.Text = "Bck";
             this.buttonBackspace.UseVisualStyleBackColor = true;
+            this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
             // 
             // buttonSquareRoot
             // 
@@ -376,42 +410,11 @@
             this.buttonSquare.Text = "x^2";
             this.buttonSquare.UseVisualStyleBackColor = true;
             // 
-            // standardToolStripMenuItem
-            // 
-            this.standardToolStripMenuItem.Name = "standardToolStripMenuItem";
-            this.standardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.standardToolStripMenuItem.Text = "Standard";
-            // 
-            // scientificToolStripMenuItem
-            // 
-            this.scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
-            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.scientificToolStripMenuItem.Text = "Scientific";
-            // 
-            // temperatureToolStripMenuItem
-            // 
-            this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
-            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.temperatureToolStripMenuItem.Text = "Temperature";
-            // 
-            // anglesToolStripMenuItem
-            // 
-            this.anglesToolStripMenuItem.Name = "anglesToolStripMenuItem";
-            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.anglesToolStripMenuItem.Text = "Angles";
-            // 
-            // colorsToolStripMenuItem
-            // 
-            this.colorsToolStripMenuItem.Name = "colorsToolStripMenuItem";
-            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.colorsToolStripMenuItem.Text = "Colors";
-            this.colorsToolStripMenuItem.Click += new System.EventHandler(this.colorsToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 299);
+            this.ClientSize = new System.Drawing.Size(291, 299);
             this.Controls.Add(this.buttonSquareRoot);
             this.Controls.Add(this.buttonPercentage);
             this.Controls.Add(this.buttonInverse);
