@@ -68,6 +68,7 @@ namespace Calculator_New
                 if (!textBoxDisplay.Text.Contains(","))
                 {
                     textBoxDisplay.Text = textBoxDisplay.Text + num.Text;
+                    labelDisplay.Text = labelDisplay.Text + num.Text;
                 }
             }
             else
@@ -77,6 +78,8 @@ namespace Calculator_New
                     textBoxDisplay.Text = "";
                 }
                 textBoxDisplay.Text = textBoxDisplay.Text + num.Text;
+                labelDisplay.Text = labelDisplay.Text + num.Text;
+
             }
             enter_value = false;
         }
@@ -96,7 +99,7 @@ namespace Calculator_New
         {
             Button num = (Button)sender;
             opera = num.Text;
-            labelDisplay.Text = textBoxDisplay.Text;
+            //labelDisplay.Text = textBoxDisplay.Text;
 
 
             switch (opera)
@@ -105,19 +108,17 @@ namespace Calculator_New
 
                         if (sumTrigger)
                         {
-                            tempNum = Convert.ToDouble(textBoxDisplay.Text);
-                            tempResult = tempNum;
+                            tempResult = Convert.ToDouble(textBoxDisplay.Text);
                             textBoxDisplay.Text = tempResult.ToString();
                             labelDisplay.Text = labelDisplay.Text + opera;
                             sumTrigger = false;
-                            prevOpera = true;
                         }
                         else
                         {
                             tempNum = Convert.ToDouble(textBoxDisplay.Text);
                             tempResult = tempResult + tempNum;
                             textBoxDisplay.Text = tempResult.ToString();
-                            labelDisplay.Text = labelDisplay.Text + opera;
+                            labelDisplay.Text = tempResult.ToString() + opera;
                         }
 
                     break;
@@ -125,8 +126,7 @@ namespace Calculator_New
                 case "-":
                         if (subTrigger)
                         {
-                            tempNum = Convert.ToDouble(textBoxDisplay.Text);
-                            tempResult = tempNum;
+                            tempResult = Convert.ToDouble(textBoxDisplay.Text);
                             textBoxDisplay.Text = tempResult.ToString();
                             labelDisplay.Text = labelDisplay.Text + opera;
                             subTrigger = false;
@@ -137,18 +137,10 @@ namespace Calculator_New
                             tempNum = Convert.ToDouble(textBoxDisplay.Text);
                             tempResult = tempResult - tempNum;
                             textBoxDisplay.Text = tempResult.ToString();
-                            labelDisplay.Text = labelDisplay.Text + opera;
+                            labelDisplay.Text = tempResult.ToString() + opera;
                         }
                     break;
             }
-
-
-
-
-
-
-
-            
             result = Double.Parse(textBoxDisplay.Text);
             textBoxDisplay.Text = "";
         }
