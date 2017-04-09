@@ -263,9 +263,13 @@ namespace Calculator_New
         {
             if (!textBoxDisplay.Text.Contains("-"))
             {
-                if (textBoxDisplay.Text == "0" || textBoxDisplay.Text == "")
+                if (textBoxDisplay.Text == "0")
                 {
                     textBoxDisplay.Text = "-";
+                }
+                else
+                {
+                    textBoxDisplay.Text = "-" + textBoxDisplay.Text;
                 }
             }
         }
