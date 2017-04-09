@@ -31,11 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormColors));
             this.groupBoxDefaultColors = new System.Windows.Forms.GroupBox();
             this.buttonRed = new System.Windows.Forms.Button();
+            this.buttonGreen = new System.Windows.Forms.Button();
             this.groupBoxDefaultColors.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxDefaultColors
             // 
+            this.groupBoxDefaultColors.Controls.Add(this.buttonGreen);
             this.groupBoxDefaultColors.Controls.Add(this.buttonRed);
             this.groupBoxDefaultColors.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDefaultColors.Location = new System.Drawing.Point(13, 13);
@@ -57,6 +59,18 @@
             this.buttonRed.UseVisualStyleBackColor = false;
             this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
             // 
+            // buttonGreen
+            // 
+            this.buttonGreen.BackColor = System.Drawing.Color.Green;
+            this.buttonGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGreen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonGreen.Location = new System.Drawing.Point(49, 24);
+            this.buttonGreen.Name = "buttonGreen";
+            this.buttonGreen.Size = new System.Drawing.Size(27, 26);
+            this.buttonGreen.TabIndex = 1;
+            this.buttonGreen.UseVisualStyleBackColor = false;
+            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
+            // 
             // FormColors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -77,5 +91,6 @@
 
         private System.Windows.Forms.GroupBox groupBoxDefaultColors;
         private System.Windows.Forms.Button buttonRed;
+        private System.Windows.Forms.Button buttonGreen;
     }
 }

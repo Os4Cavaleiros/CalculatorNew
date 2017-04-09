@@ -24,5 +24,10 @@ namespace Calculator_New
         {
             fr1Local.BackColor = Color.Red;
         }
+
+        private void buttonGreen_Click(object sender, EventArgs e)
+        {
+            fr1Local.BackColor = Color.Green;
+        }
     }
 }
