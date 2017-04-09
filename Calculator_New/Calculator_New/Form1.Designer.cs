@@ -76,7 +76,7 @@
             this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(288, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(291, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,25 +94,26 @@
             // standardToolStripMenuItem
             // 
             this.standardToolStripMenuItem.Name = "standardToolStripMenuItem";
-            this.standardToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.standardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.standardToolStripMenuItem.Text = "Standard";
+            this.standardToolStripMenuItem.Click += new System.EventHandler(this.standardToolStripMenuItem_Click);
             // 
             // scientificToolStripMenuItem
             // 
             this.scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
-            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.scientificToolStripMenuItem.Text = "Scientific";
             // 
             // temperatureToolStripMenuItem
             // 
             this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
-            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.temperatureToolStripMenuItem.Text = "Temperature";
             // 
             // anglesToolStripMenuItem
             // 
             this.anglesToolStripMenuItem.Name = "anglesToolStripMenuItem";
-            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.anglesToolStripMenuItem.Text = "Angles";
             // 
             // helpToolStripMenuItem
@@ -152,7 +153,7 @@
             this.textBoxDisplay.Location = new System.Drawing.Point(12, 32);
             this.textBoxDisplay.Multiline = true;
             this.textBoxDisplay.Name = "textBoxDisplay";
-            this.textBoxDisplay.Size = new System.Drawing.Size(267, 65);
+            this.textBoxDisplay.Size = new System.Drawing.Size(271, 65);
             this.textBoxDisplay.TabIndex = 1;
             this.textBoxDisplay.Text = "0";
             this.textBoxDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -368,6 +369,7 @@
             this.buttonBackspace.TabIndex = 20;
             this.buttonBackspace.Text = "Bck";
             this.buttonBackspace.UseVisualStyleBackColor = true;
+            this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
             // 
             // buttonSquareRoot
             // 
@@ -411,7 +413,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 299);
+            this.ClientSize = new System.Drawing.Size(291, 299);
             this.Controls.Add(this.buttonSquareRoot);
             this.Controls.Add(this.buttonPercentage);
             this.Controls.Add(this.buttonInverse);

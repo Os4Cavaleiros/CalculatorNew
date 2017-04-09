@@ -19,7 +19,8 @@ namespace Calculator_New
             InitializeComponent();
             fr1Local = fr1;
         }
-
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////// DEFAULT COLOURS ///////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// Altera todas as cores para default
         /// </summary>
@@ -32,6 +33,9 @@ namespace Calculator_New
             fr1Local.BackColor = DefaultBackColor;
         }
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////// ALTERA AS CORES PARA A COR DO BOTAO /////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////// E O MENU STRIP PARA UMA COR MAIS DARK ///////////////////////////////////////////////////////////////////
         /// <summary>
         /// Altera no main form a cor background
         /// Do menu strip
@@ -71,6 +75,27 @@ namespace Calculator_New
         {
             fr1Local.BackColor = Color.Blue;
             fr1Local.MainMenuStrip.BackColor = Color.DarkBlue;
+            fr1Local.MainMenuStrip.ForeColor = Color.White;
+        }
+
+        private void buttonOrange_Click(object sender, EventArgs e)
+        {
+            fr1Local.BackColor = Color.Orange;
+            fr1Local.MainMenuStrip.BackColor = Color.DarkOrange;
+            fr1Local.MainMenuStrip.ForeColor = Color.White;
+        }
+
+        private void buttonYellow_Click(object sender, EventArgs e)
+        {
+            fr1Local.BackColor = Color.Yellow;
+            fr1Local.MainMenuStrip.BackColor = Color.Orange;
+            fr1Local.MainMenuStrip.ForeColor = Color.White;
+        }
+
+        private void buttonPink_Click(object sender, EventArgs e)
+        {
+            fr1Local.BackColor = Color.Fuchsia;
+            fr1Local.MainMenuStrip.BackColor = Color.DarkMagenta;
             fr1Local.MainMenuStrip.ForeColor = Color.White;
         }
     }

@@ -37,7 +37,7 @@ namespace Calculator_New
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Width = 308;
-            textBoxDisplay.Width = 267;
+            textBoxDisplay.Width = 271;
             this.Text = "Calculator (Standard)";
             this.Height = 338;
         }
@@ -142,13 +142,6 @@ namespace Calculator_New
                     break;
             }
 
-
-
-
-
-
-
-            
             result = Double.Parse(textBoxDisplay.Text);
             textBoxDisplay.Text = "";
         }
@@ -244,6 +237,28 @@ namespace Calculator_New
         {
             FormColors myFormColors = new FormColors(this);
             myFormColors.ShowDialog();
+        }
+
+        // SIZE PARA QUANDO CLICAR STANDARD
+        private void standardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Width = 308;
+            textBoxDisplay.Width = 271;
+            this.Text = "Calculator (Standard)";
+            this.Height = 338;
+        }
+
+        //  Botao backspace, se poder retirar 1 retira senão mantém o 0.
+        private void buttonBackspace_Click(object sender, EventArgs e)
+        {
+            if (textBoxDisplay.Text.Length - 1 > 0)
+            {
+                textBoxDisplay.Text = textBoxDisplay.Text.Remove(textBoxDisplay.Text.Length - 1, 1);
+            }
+            else 
+            {
+                textBoxDisplay.Text = "0";
+            }
         }
     }
 }
