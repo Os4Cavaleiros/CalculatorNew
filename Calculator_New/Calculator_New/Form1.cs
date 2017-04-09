@@ -248,7 +248,7 @@ namespace Calculator_New
             this.Height = 338;
         }
 
-        //  Botao backspace, se poder retirar 1 retira senão mantém o 0.
+        //  Botão backspace, se poder retirar 1 retira senão mantém o 0.
         private void buttonBackspace_Click(object sender, EventArgs e)
         {
             if (textBoxDisplay.Text.Length - 1 > 0)
