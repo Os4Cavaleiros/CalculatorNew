@@ -236,7 +236,11 @@ namespace Calculator_New
             myFormColors.ShowDialog();
         }
 
-        // SIZE PARA QUANDO CLICAR STANDARD
+        /// <summary>
+        /// Tamanhos standard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void standardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Width = 308;
@@ -245,7 +249,11 @@ namespace Calculator_New
             this.Height = 338;
         }
 
-        //  Botão backspace, se poder retirar 1 retira senão mantém o 0.
+        /// <summary>
+        /// Botão backspace, se poder retirar 1 retira senão mantém o 0.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonBackspace_Click(object sender, EventArgs e)
         {
             if (textBoxDisplay.Text.Length - 1 > 0)
@@ -258,7 +266,11 @@ namespace Calculator_New
             }
         }
 
-        // BOTAO DE SINAL NEGATIVO, apenas poe se possivel (se nao houver outro e se for apenas no inicio)
+        /// <summary>
+        /// Botão de sinal negativo, apenas põe se possível (se não houver outro)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonPlusMinus_Click(object sender, EventArgs e)
         {
             if (!textBoxDisplay.Text.Contains("-"))

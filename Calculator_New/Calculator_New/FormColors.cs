@@ -19,8 +19,10 @@ namespace Calculator_New
             InitializeComponent();
             fr1Local = fr1;
         }
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////// DEFAULT COLOURS ///////////////////////////////////////////////////////////////////////////////////////////
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////// DEFAULT COLORS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
         /// Altera todas as cores para default
@@ -34,13 +36,9 @@ namespace Calculator_New
             fr1Local.BackColor = DefaultBackColor;
         }
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////// ALTERA AS CORES PARA A COR DO BOTAO /////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////// E O MENU STRIP PARA UMA COR MAIS DARK ///////////////////////////////////////////////////////////////////
-
         /// <summary>
         /// Altera no main form a cor background
-        /// Do menu strip
+        /// Do menu strip para a cor mais dark
         /// E a cor da font do menu strip para branco
         /// </summary>
         /// <param name="sender"></param>
@@ -54,7 +52,7 @@ namespace Calculator_New
 
         /// <summary>
         /// Altera no main form a cor background e do menu strip para a do botão
-        /// Do menu strip
+        /// Do menu strip para a cor mais dark
         /// E a cor da font do menu strip para branco
         /// </summary>
         /// <param name="sender"></param>
@@ -68,7 +66,7 @@ namespace Calculator_New
 
         /// <summary>
         /// Altera no main form a cor background e do menu strip para a do botão
-        /// Do menu strip
+        /// Do menu strip para a cor mais dark
         /// E a cor da font do menu strip para branco
         /// </summary>
         /// <param name="sender"></param>
@@ -82,7 +80,7 @@ namespace Calculator_New
 
         /// <summary>
         /// Altera no main form a cor background e do menu strip para a do botão
-        /// Do menu strip
+        /// Do menu strip para a cor mais dark
         /// E a cor da font do menu strip para branco
         /// </summary>
         /// <param name="sender"></param>
@@ -96,7 +94,7 @@ namespace Calculator_New
 
         /// <summary>
         /// Altera no main form a cor background e do menu strip para a do botão
-        /// Do menu strip
+        /// Do menu strip para a cor mais dark
         /// E a cor da font do menu strip para branco
         /// </summary>
         /// <param name="sender"></param>
@@ -110,7 +108,7 @@ namespace Calculator_New
 
         /// <summary>
         /// Altera no main form a cor background e do menu strip para a do botão
-        /// Do menu strip
+        /// Do menu strip para a cor mais dark
         /// E a cor da font do menu strip para branco
         /// </summary>
         /// <param name="sender"></param>

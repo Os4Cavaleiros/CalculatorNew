@@ -94,26 +94,26 @@
             // standardToolStripMenuItem
             // 
             this.standardToolStripMenuItem.Name = "standardToolStripMenuItem";
-            this.standardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.standardToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.standardToolStripMenuItem.Text = "Standard";
             this.standardToolStripMenuItem.Click += new System.EventHandler(this.standardToolStripMenuItem_Click);
             // 
             // scientificToolStripMenuItem
             // 
             this.scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
-            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.scientificToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.scientificToolStripMenuItem.Text = "Scientific";
             // 
             // temperatureToolStripMenuItem
             // 
             this.temperatureToolStripMenuItem.Name = "temperatureToolStripMenuItem";
-            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.temperatureToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.temperatureToolStripMenuItem.Text = "Temperature";
             // 
             // anglesToolStripMenuItem
             // 
             this.anglesToolStripMenuItem.Name = "anglesToolStripMenuItem";
-            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.anglesToolStripMenuItem.Text = "Angles";
             // 
             // helpToolStripMenuItem
@@ -143,7 +143,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // textBoxDisplay
@@ -364,11 +364,12 @@
             // 
             // buttonBackspace
             // 
+            this.buttonBackspace.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBackspace.BackgroundImage")));
+            this.buttonBackspace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonBackspace.Location = new System.Drawing.Point(243, 107);
             this.buttonBackspace.Name = "buttonBackspace";
             this.buttonBackspace.Size = new System.Drawing.Size(40, 40);
             this.buttonBackspace.TabIndex = 20;
-            this.buttonBackspace.Text = "Bck";
             this.buttonBackspace.UseVisualStyleBackColor = true;
             this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
             // 
