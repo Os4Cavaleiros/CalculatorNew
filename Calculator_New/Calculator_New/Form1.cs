@@ -98,7 +98,6 @@ namespace Calculator_New
             opera = num.Text;
             labelDisplay.Text = textBoxDisplay.Text;
 
-
             switch (opera)
             {
                 case "+":
@@ -119,7 +118,6 @@ namespace Calculator_New
                             textBoxDisplay.Text = tempResult.ToString();
                             labelDisplay.Text = labelDisplay.Text + opera;
                         }
-
                     break;
 
                 case "-":
@@ -161,13 +159,13 @@ namespace Calculator_New
             {
                 case "+":
                     textBoxDisplay.Text = (result + Double.Parse(textBoxDisplay.Text)).ToString();
-                    labelDisplay.Text = textBoxDisplay.Text;
+                    labelDisplay.Text = "sum = " + textBoxDisplay.Text;
                     sumTrigger = true;
                     break;
 
                 case "-":
                     textBoxDisplay.Text = (result - Double.Parse(textBoxDisplay.Text)).ToString();
-                    labelDisplay.Text = textBoxDisplay.Text;
+                    labelDisplay.Text = "sum (-) =" + textBoxDisplay.Text;
                     subTrigger = true;
                     break;
 
@@ -178,7 +176,6 @@ namespace Calculator_New
                 case "/":
                     textBoxDisplay.Text = (result / Double.Parse(textBoxDisplay.Text)).ToString();
                     break;
-
             }
         }
 
@@ -258,6 +255,18 @@ namespace Calculator_New
             else 
             {
                 textBoxDisplay.Text = "0";
+            }
+        }
+
+        // BOTAO DE SINAL NEGATIVO, apenas poe se possivel (se nao houver outro e se for apenas no inicio)
+        private void buttonPlusMinus_Click(object sender, EventArgs e)
+        {
+            if (!textBoxDisplay.Text.Contains("-"))
+            {
+                if (textBoxDisplay.Text == "0" || textBoxDisplay.Text == "")
+                {
+                    textBoxDisplay.Text = "-";
+                }
             }
         }
     }
