@@ -29,6 +29,8 @@ namespace Calculator_New
         private bool sumTrigger = true;
         private bool subTrigger = true;
         private bool prevOpera = true;
+        private bool divTrigger = true;
+        private bool multiTrigger = true;
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////// FORM LOAD ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,40 +105,83 @@ namespace Calculator_New
 
             switch (opera)
             {
+                //soma
                 case "+":
 
-                        if (sumTrigger)
-                        {
-                            tempResult = Convert.ToDouble(textBoxDisplay.Text);
-                            textBoxDisplay.Text = tempResult.ToString();
-                            labelDisplay.Text = labelDisplay.Text + opera;
-                            sumTrigger = false;
-                        }
-                        else
-                        {
-                            tempNum = Convert.ToDouble(textBoxDisplay.Text);
-                            tempResult = tempResult + tempNum;
-                            textBoxDisplay.Text = tempResult.ToString();
-                            labelDisplay.Text = tempResult.ToString() + opera;
-                        }
+                    if (sumTrigger)
+                    {
+                        tempResult = Convert.ToDouble(textBoxDisplay.Text);
+                        textBoxDisplay.Text = tempResult.ToString();
+                        labelDisplay.Text = labelDisplay.Text + opera;
+                        sumTrigger = false;
+                    }
+                    else
+                    {
+                        tempNum = Convert.ToDouble(textBoxDisplay.Text);
+                        tempResult = tempResult + tempNum;
+                        textBoxDisplay.Text = tempResult.ToString();
+                        labelDisplay.Text = tempResult.ToString() + opera;
+                    }
                     break;
-
+                //diferença
                 case "-":
-                        if (subTrigger)
-                        {
-                            tempResult = Convert.ToDouble(textBoxDisplay.Text);
-                            textBoxDisplay.Text = tempResult.ToString();
-                            labelDisplay.Text = labelDisplay.Text + opera;
-                            subTrigger = false;
+                    if (subTrigger)
+                    {
+                        tempResult = Convert.ToDouble(textBoxDisplay.Text);
+                        textBoxDisplay.Text = tempResult.ToString();
+                        labelDisplay.Text = labelDisplay.Text + opera;
+                        subTrigger = false;
 
-                        }
-                        else
+                    }
+                    else
+                    {
+                        tempNum = Convert.ToDouble(textBoxDisplay.Text);
+                        tempResult = tempResult - tempNum;
+                        textBoxDisplay.Text = tempResult.ToString();
+                        labelDisplay.Text = tempResult.ToString() + opera;
+                    }
+                    break;
+                //divisao
+                case "/":
+                    if (divTrigger)
+                    {
+                        tempResult = Convert.ToDouble(textBoxDisplay.Text);
+                        textBoxDisplay.Text = tempResult.ToString();
+                        labelDisplay.Text = labelDisplay.Text + opera;
+                        divTrigger = false;
+                    }
+                    else
+                    {
+                        if(textBoxDisplay.Text != "0")
                         {
                             tempNum = Convert.ToDouble(textBoxDisplay.Text);
-                            tempResult = tempResult - tempNum;
+                            tempResult = tempResult / tempNum;
                             textBoxDisplay.Text = tempResult.ToString();
                             labelDisplay.Text = tempResult.ToString() + opera;
                         }
+                        else
+                        {
+                            MessageBox.Show("divide by 0 error");
+                        }
+                    }
+
+                    break;
+                //multiplicaçao
+                case "*":
+                    if (multiTrigger)
+                    {
+                        tempResult = Convert.ToDouble(textBoxDisplay.Text);
+                        textBoxDisplay.Text = tempResult.ToString();
+                        labelDisplay.Text = labelDisplay.Text + opera;
+                        multiTrigger = false;
+                    }
+                    else
+                    {
+                        tempNum = Convert.ToDouble(textBoxDisplay.Text);
+                        tempResult = tempResult * tempNum;
+                        textBoxDisplay.Text = tempResult.ToString();
+                        labelDisplay.Text = tempResult.ToString() + opera;
+                    }
                     break;
             }
 
@@ -196,6 +241,8 @@ namespace Calculator_New
             tempResult = 0;
             sumTrigger = true;
             subTrigger = true;
+            divTrigger = true;
+            multiTrigger = true;
             prevOpera = false;
             labelDisplay.Text = "";
         }
